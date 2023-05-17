@@ -76,12 +76,13 @@ wykonaj_druga_opcja(3, Plec) :-
     write('Wybrano opcjê C.'), nl,
     menu_zapach(Plec).
 
+%todo cofanie w menu,menu pochodzenia, dokonczyc menu zapachu
 menu_zapach(Plec) :-
     write('1. Pokaz wszystkie'), nl,
     write('2. Lagodne'), nl,
     write('3. Intensywne'), nl,
     write('4. Ekscentryczne'), nl,
-    write('5. '), nl,
+    write('5. Swierze'), nl,
     write('Wybierz opcjê (wpisz numer): '),
     read(Opcja),
     wykonaj_trzecia_opcja(Opcja, Plec).
@@ -92,8 +93,10 @@ wykonaj_trzecia_opcja(1 ,Plec) :-
 
 wykonaj_trzecia_opcja(2, Plec) :-
     write('Wybrano opcjê B.'), nl,
-    write(Plec).
+    wyswietl_wedlug_intensywnosc(lagodne,Plec).
 
 wykonaj_trzecia_opcja(3, Plec) :-
     write('Wybrano opcjê C.'), nl,
-    write(Plec).
+    wyswietl_wedlug_intensywnosc(intensywne,Plec).
+
+
